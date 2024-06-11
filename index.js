@@ -13,7 +13,7 @@ app.use(express.static('public'));
 
 
 app.get('/',(_request,response) => { 
-    response.render('./index');
+    response.render('index.ejs');
 })
 app.get('*', (_request,response)=>{
     response.send('404 NOT FOUND')
