@@ -12,7 +12,7 @@ app.use(express.static('assets'));
 app.use(express.static('public'));
 
 
-app.get('https://sebastian-portfolio.vercel.app/',(_request,response) => { 
+app.get('/',(_request,response) => { 
     response.render('./index');
 })
 app.get('*', (_request,response)=>{
