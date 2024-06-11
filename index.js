@@ -13,10 +13,10 @@ app.use(express.static('public'));
 
 
 app.get('/',(_request,response) => { 
-    response.render('index.ejs');
+    response.render('../views/index.ejs');
 })
 app.get('*', (_request,response)=>{
-    response.send('404 NOT FOUND')
+    response.status(404).send('404 NOT FOUND')
 })
 app.listen(PORT,() =>{
     console.log(`App listening on port ${PORT}`);
